@@ -2,6 +2,7 @@
 // Wildflower theme - Colorful, playful
 
 import type { Theme } from '../types.js';
+import { generateGlass } from '../utils/glass.js';
 
 // Wildflower uses vibrant purples and pinks for a playful aesthetic
 const palette = {
@@ -39,5 +40,15 @@ export const wildflower: Theme = {
 		type: 'sidebar',
 		maxWidth: '1200px',
 		spacing: 'comfortable'
-	}
+	},
+
+	glass: generateGlass({
+		lightSurface: palette.surface,
+		darkSurface: '#2e1065', // purple-950
+		accent: palette.accent,
+		lightBorder: palette.border,
+		darkBorder: '#581c87'
+	}),
+
+	seasonalAffinity: 'spring'
 };

@@ -3,6 +3,7 @@
 
 import type { Theme } from '../types.js';
 import { bark, cream, status } from '../tokens/colors.js';
+import { generateDarkGlass } from '../utils/glass.js';
 
 export const cozyCabin: Theme = {
 	id: 'cozy-cabin',
@@ -30,5 +31,15 @@ export const cozyCabin: Theme = {
 		type: 'sidebar',
 		maxWidth: '1000px',
 		spacing: 'comfortable'
-	}
+	},
+
+	glass: generateDarkGlass({
+		lightSurface: cream[100],
+		darkSurface: bark[900],
+		accent: status.warning.DEFAULT,
+		lightBorder: cream[300],
+		darkBorder: bark[800]
+	}),
+
+	seasonalAffinity: 'autumn'
 };

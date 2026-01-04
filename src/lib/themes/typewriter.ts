@@ -3,6 +3,7 @@
 
 import type { Theme } from '../types.js';
 import { bark, cream } from '../tokens/colors.js';
+import { generateGlass } from '../utils/glass.js';
 
 export const typewriter: Theme = {
 	id: 'typewriter',
@@ -30,5 +31,15 @@ export const typewriter: Theme = {
 		type: 'centered',
 		maxWidth: '600px',
 		spacing: 'spacious'
-	}
+	},
+
+	glass: generateGlass({
+		lightSurface: cream[200],
+		darkSurface: bark[900],
+		accent: bark[600],
+		lightBorder: cream[500],
+		darkBorder: bark[700]
+	}),
+
+	seasonalAffinity: 'autumn'
 };

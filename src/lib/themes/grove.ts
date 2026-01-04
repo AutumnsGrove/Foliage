@@ -3,6 +3,7 @@
 
 import type { Theme } from '../types.js';
 import { grove as groveColors, bark, cream, semantic } from '../tokens/colors.js';
+import { generateGlass } from '../utils/glass.js';
 
 export const grove: Theme = {
 	id: 'grove',
@@ -30,5 +31,15 @@ export const grove: Theme = {
 		type: 'sidebar',
 		maxWidth: '1200px',
 		spacing: 'comfortable'
-	}
+	},
+
+	glass: generateGlass({
+		lightSurface: cream[50],
+		darkSurface: bark[900],
+		accent: groveColors[600],
+		lightBorder: cream[200],
+		darkBorder: bark[700]
+	}),
+
+	seasonalAffinity: 'all'
 };

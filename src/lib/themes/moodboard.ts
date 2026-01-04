@@ -2,6 +2,7 @@
 // Moodboard theme - Pinterest-style masonry
 
 import type { Theme } from '../types.js';
+import { generateGlass } from '../utils/glass.js';
 
 // Moodboard uses neutral grays with a pop of rose for accent
 const palette = {
@@ -39,5 +40,15 @@ export const moodboard: Theme = {
 		type: 'masonry',
 		maxWidth: '1600px',
 		spacing: 'compact'
-	}
+	},
+
+	glass: generateGlass({
+		lightSurface: palette.surface,
+		darkSurface: '#1f1f1f',
+		accent: palette.accent,
+		lightBorder: palette.border,
+		darkBorder: '#404040'
+	}),
+
+	seasonalAffinity: 'all'
 };

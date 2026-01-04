@@ -3,6 +3,7 @@
 
 import type { Theme } from '../types.js';
 import { grove } from '../tokens/colors.js';
+import { generateGlass } from '../utils/glass.js';
 
 // Solarpunk builds on bright greens and sunny yellows
 // for a hopeful, future-focused aesthetic
@@ -41,5 +42,15 @@ export const solarpunk: Theme = {
 		type: 'full-width',
 		maxWidth: '100%',
 		spacing: 'comfortable'
-	}
+	},
+
+	glass: generateGlass({
+		lightSurface: palette.surface,
+		darkSurface: grove[900],
+		accent: palette.accent,
+		lightBorder: palette.border,
+		darkBorder: grove[700]
+	}),
+
+	seasonalAffinity: 'summer'
 };
