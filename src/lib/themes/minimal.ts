@@ -3,6 +3,7 @@
 
 import type { Theme } from '../types.js';
 import { bark } from '../tokens/colors.js';
+import { generateGlass } from '../utils/glass.js';
 
 // Minimal uses a monochromatic palette with warm bark undertones
 // for text to avoid the harshness of pure black on white
@@ -40,5 +41,15 @@ export const minimal: Theme = {
 		type: 'no-sidebar',
 		maxWidth: '680px',
 		spacing: 'spacious'
-	}
+	},
+
+	glass: generateGlass({
+		lightSurface: neutrals.offWhite,
+		darkSurface: '#1a1a1a',
+		accent: neutrals.nearBlack,
+		lightBorder: neutrals.lightGray,
+		darkBorder: '#333333'
+	}),
+
+	seasonalAffinity: 'all'
 };

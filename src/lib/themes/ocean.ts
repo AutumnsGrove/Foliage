@@ -2,6 +2,7 @@
 // Ocean theme - Cool blues, calm
 
 import type { Theme } from '../types.js';
+import { generateGlass } from '../utils/glass.js';
 
 // Ocean uses serene blues inspired by the sea
 const palette = {
@@ -39,5 +40,15 @@ export const ocean: Theme = {
 		type: 'no-sidebar',
 		maxWidth: '800px',
 		spacing: 'spacious'
-	}
+	},
+
+	glass: generateGlass({
+		lightSurface: palette.surface,
+		darkSurface: '#0c4a6e',
+		accent: palette.accent,
+		lightBorder: palette.border,
+		darkBorder: '#164e63'
+	}),
+
+	seasonalAffinity: 'summer'
 };

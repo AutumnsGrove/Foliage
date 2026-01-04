@@ -1,37 +1,24 @@
 // src/lib/themes/night-garden.ts
-// Night Garden theme - Dark mode, gentle greens
+// Night Garden theme - Midnight Bloom dark mode
+// Uses GroveEngine's canonical Midnight Bloom palette
 
 import type { Theme } from '../types.js';
-import { grove } from '../tokens/colors.js';
-
-// Night Garden builds a dark palette around grove greens
-// for a calming, nature-inspired dark mode
-const night = {
-	// Deep greens with hints of grove color
-	background: '#0f1612',
-	surface: '#1a2420',
-	// Light foregrounds tinted with grove
-	foreground: grove[50], // #f0fdf4 - very light green-tinted white
-	foregroundMuted: '#8fa898', // Muted sage green
-	// Bright accent from grove palette
-	accent: grove[300], // #86efac - vibrant but gentle green
-	border: '#2d3d35'
-} as const;
+import { MIDNIGHT_BLOOM, generateMidnightBloomGlass } from '../utils/glass.js';
 
 export const nightGarden: Theme = {
 	id: 'night-garden',
 	name: 'Night Garden',
-	description: 'Dark mode with gentle greens — peaceful nighttime reading',
+	description: 'Midnight Bloom — intimate evening atmosphere with deep purples',
 	thumbnail: '/themes/night-garden-thumb.png',
 	tier: 'seedling',
 
 	colors: {
-		background: night.background,
-		surface: night.surface,
-		foreground: night.foreground,
-		foregroundMuted: night.foregroundMuted,
-		accent: night.accent,
-		border: night.border
+		background: MIDNIGHT_BLOOM.background,
+		surface: MIDNIGHT_BLOOM.surface,
+		foreground: MIDNIGHT_BLOOM.foreground,
+		foregroundMuted: MIDNIGHT_BLOOM.foregroundMuted,
+		accent: MIDNIGHT_BLOOM.accent,
+		border: MIDNIGHT_BLOOM.border
 	},
 
 	fonts: {
@@ -44,5 +31,9 @@ export const nightGarden: Theme = {
 		type: 'sidebar',
 		maxWidth: '1200px',
 		spacing: 'comfortable'
-	}
+	},
+
+	glass: generateMidnightBloomGlass(),
+
+	seasonalAffinity: 'winter'
 };
