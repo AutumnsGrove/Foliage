@@ -47,7 +47,7 @@ export interface GlassVariant {
 
 /**
  * Complete glass variants for a theme.
- * Follows Prism pattern's six glass types.
+ * Follows Prism pattern's seven glass types.
  */
 export interface ThemeGlass {
 	/** Headers/navbars - highest opacity (95%) */
@@ -56,6 +56,8 @@ export interface ThemeGlass {
 	tint: GlassVariant;
 	/** Content boxes - high opacity (80%) */
 	card: GlassVariant;
+	/** Frosted glass - strong blur, high opacity (70%) for prominent elements */
+	frosted: GlassVariant;
 	/** Callouts/CTAs - accent-tinted (30%) */
 	accent: GlassVariant;
 	/** Modal backdrops - dark overlay (50%) */

@@ -22,6 +22,7 @@ export const GLASS_OPACITY = {
 	surface: { light: 0.95, dark: 0.95 },
 	tint: { light: 0.6, dark: 0.5 },
 	card: { light: 0.8, dark: 0.7 },
+	frosted: { light: 0.7, dark: 0.35 },
 	accent: { light: 0.3, dark: 0.2 },
 	overlay: { light: 0.5, dark: 0.6 },
 	muted: { light: 0.4, dark: 0.3 }
@@ -34,6 +35,7 @@ export const GLASS_BLUR: Record<keyof typeof GLASS_OPACITY, GlassVariant['blur']
 	surface: 'md',
 	tint: 'md',
 	card: 'md',
+	frosted: 'lg',
 	accent: 'sm',
 	overlay: 'lg',
 	muted: 'sm'
@@ -89,6 +91,7 @@ export function generateGlass(options: GlassGeneratorOptions = {}): ThemeGlass {
 		surface: createVariant('surface'),
 		tint: createVariant('tint'),
 		card: createVariant('card'),
+		frosted: createVariant('frosted'),
 		accent: {
 			...createVariant('accent', accent, accent),
 			border: hexToRgba(accent, 0.3),
@@ -133,6 +136,7 @@ export function generateDarkGlass(options: GlassGeneratorOptions = {}): ThemeGla
 		surface: createVariant('surface'),
 		tint: createVariant('tint'),
 		card: createVariant('card'),
+		frosted: createVariant('frosted'),
 		accent: {
 			...createVariant('accent'),
 			background: hexToRgba(accent, 0.15),
