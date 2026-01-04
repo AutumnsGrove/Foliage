@@ -17,12 +17,48 @@ Foliage is Grove's theme system — providing visual customization from simple a
 
 ## Architecture Notes
 - **Package name:** `@autumnsgrove/foliage`
+- **Status:** Package implemented, pending GroveEngine integration
 - **Tiered feature access:** Free → Seedling → Sapling → Oak → Evergreen
 - **10 curated themes** with tier-based unlocking
 - **Theme Customizer** (Oak+) for full color/typography/layout control
 - **Custom Fonts** (Evergreen) with WOFF2 validation
 - **Community Themes** (Oak+) for sharing and discovery
-- **Accessibility-first:** All themes must meet WCAG 2.1 AA contrast
+- **Accessibility-first:** All themes must meet WCAG 2.1 AA contrast (4.5:1 for body text)
+
+## Development Commands
+```bash
+pnpm install      # Install dependencies
+pnpm build        # Build library to dist/
+pnpm test --run   # Run tests (186 passing)
+pnpm lint         # Run ESLint
+pnpm check        # Type checking with svelte-check
+```
+
+## Key Directory Structure
+```
+src/lib/
+├── components/     # Svelte 5 components (13 total)
+├── server/         # D1/R2 database functions
+├── themes/         # 10 theme definitions
+├── tokens/         # Color tokens (grove, cream, bark scales)
+├── utils/          # Utilities (contrast, css-vars, tier-access)
+└── types.ts        # TypeScript interfaces
+```
+
+## Important Gotchas
+1. **Svelte 5 Runes:** All components use `$props()`, `$state()`, `$derived()`, `$effect()` - NOT old reactive syntax
+2. **Tier system:** `UserTier = 'free' | 'seedling' | 'sapling' | 'oak' | 'evergreen'` - see `tier-access.ts`
+3. **WCAG compliance:** All themes MUST pass `validateThemeContrast()` - 4.5:1 for body text
+4. **D1 types:** Global `D1Database` declared in `theme-loader.ts` - don't redeclare
+5. **R2 types:** Global `R2Bucket` declared in `font-uploader.ts` - don't redeclare
+6. **Testing:** Run `pnpm test --run` before committing - all tests must pass
+7. **Build:** Run `pnpm build` to ensure library compiles to `dist/`
+
+## Spec & Documentation
+- **Full Spec:** `docs/PROJECT-SPEC.md` - Complete feature requirements
+- **Types:** `src/lib/types.ts` - All TypeScript interfaces
+- **Migrations:** `migrations/*.sql` - Database schema
+- **Token Colors:** `src/lib/tokens/colors.ts` - grove, bark, cream scales
 
 ---
 
