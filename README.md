@@ -1,9 +1,13 @@
 # Foliage
 
+[![npm version](https://img.shields.io/npm/v/@groveengine/foliage.svg)](https://www.npmjs.com/package/@groveengine/foliage)
+[![npm downloads](https://img.shields.io/npm/dm/@groveengine/foliage.svg)](https://www.npmjs.com/package/@groveengine/foliage)
+[![license](https://img.shields.io/npm/l/@groveengine/foliage.svg)](https://github.com/AutumnsGrove/Foliage/blob/main/LICENSE)
+[![Svelte 5](https://img.shields.io/badge/Svelte-5-ff3e00.svg)](https://svelte.dev)
+
 Grove's theme system — personal expression with modern guardrails.
 
 **Package:** `@groveengine/foliage`
-**Status:** Package implemented, pending GroveEngine integration
 
 ---
 
@@ -103,7 +107,7 @@ foliage/
 │   ├── utils/           # Contrast checking, CSS variables
 │   └── types.ts         # TypeScript interfaces
 ├── migrations/          # D1 schema
-├── tests/               # Vitest tests (186 passing)
+├── tests/               # Vitest tests (312 passing)
 └── examples/            # SvelteKit integration examples
 ```
 

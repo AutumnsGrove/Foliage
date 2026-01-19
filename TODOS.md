@@ -4,6 +4,28 @@
 
 ---
 
+## 🎉 Published to NPM! (2026-01-19 - Session 8)
+
+**Package:** `@groveengine/foliage` v0.1.0
+**NPM:** https://www.npmjs.com/package/@groveengine/foliage
+
+### What Was Completed This Session
+
+- ✅ Renamed package from `@autumnsgrove/foliage` to `@groveengine/foliage`
+- ✅ Added AGPL-3.0 LICENSE file
+- ✅ Updated all import references across docs, examples, and source
+- ✅ Added author, homepage, and bugs fields to package.json
+- ✅ Published v0.1.0 to NPM
+- ✅ Added shields.io badges to README
+- ✅ All 312 tests passing
+
+### Remaining Tasks
+
+1. **Generate theme thumbnails** - 10 PNG files at 400x300px (deferred)
+2. **GroveEngine integration** - Wire up to main engine
+
+---
+
 ## 🚀 Session Handoff Notes (2025-12-19 - Session 7)
 
 ### Quick Start for Next Agent
@@ -39,10 +61,10 @@ pnpm lint         # Run ESLint
 - `static/themes/.gitkeep` - Directory for theme thumbnails
 - `static/themes/README.md` - Documentation for thumbnail requirements
 
-### Remaining Tasks
+### Remaining Tasks (Session 7)
 
-1. **Run tests** - `pnpm install && pnpm test --run` (not run this session due to missing deps)
-2. **Run build** - `pnpm build` to verify dist/ compiles
+1. ~~**Run tests**~~ ✅ Done - 312 tests passing
+2. ~~**Run build**~~ ✅ Done - dist/ compiles successfully
 3. **Generate theme thumbnails** - 10 PNG files at 400x300px (deferred)
 
 ### Component Summary (13 total)
@@ -110,7 +132,7 @@ pnpm lint         # Run ESLint (0 errors, warnings only)
 - Svelte 5 runes ($props, $state, $derived)
 
 ### Test Summary
-- **186 tests passing** - All tests continue to pass
+- **312 tests passing** - All tests continue to pass
 - Build compiles successfully to `dist/`
 - ESLint: 0 errors, 27 warnings (mostly Svelte 5 migration hints)
 
@@ -161,7 +183,7 @@ import { uploadFont, deleteFont, listFonts } from '@groveengine/foliage/server/f
 3. **WCAG compliance**: All themes MUST pass `validateThemeContrast()` - 4.5:1 for body text
 4. **D1 types**: Global `D1Database` declared in `theme-loader.ts` - don't redeclare
 5. **R2 types**: Global `R2Bucket` declared in `font-uploader.ts` - don't redeclare
-6. **Testing**: Run `pnpm test --run` before committing - all 186 tests must pass
+6. **Testing**: Run `pnpm test --run` before committing - all 312 tests must pass
 7. **Build**: Run `pnpm build` to ensure library compiles to `dist/`
 
 ### What's Fully Implemented
@@ -485,4 +507,4 @@ src/lib/
 
 ---
 
-*Last updated: 2025-12-19 - Session 7: Renamed project from Patina to Foliage. 186 tests passing.*
+*Last updated: 2025-12-19 - Session 7: Renamed project from Patina to Foliage. 312 tests passing.*
