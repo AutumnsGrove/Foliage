@@ -1,4 +1,4 @@
-// @autumnsgrove/foliage - Package Entry Point
+// @groveengine/foliage - Package Entry Point
 // Theme system for Grove — personal expression with modern guardrails
 
 // Re-export types

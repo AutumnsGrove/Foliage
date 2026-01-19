@@ -7,7 +7,7 @@ This directory demonstrates how to integrate Foliage server functions into a Sve
 ### 1. Install Foliage
 
 ```bash
-pnpm add @autumnsgrove/foliage
+pnpm add @groveengine/foliage
 ```
 
 ### 2. Configure Cloudflare Bindings
@@ -34,10 +34,10 @@ wrangler d1 list
 
 ```bash
 # Create base tables
-wrangler d1 execute foliage-db --file=node_modules/@autumnsgrove/foliage/migrations/001_initial.sql
+wrangler d1 execute foliage-db --file=node_modules/@groveengine/foliage/migrations/001_initial.sql
 
 # Create community themes table
-wrangler d1 execute foliage-db --file=node_modules/@autumnsgrove/foliage/migrations/002_community_themes.sql
+wrangler d1 execute foliage-db --file=node_modules/@groveengine/foliage/migrations/002_community_themes.sql
 ```
 
 ### 4. Copy API Routes
@@ -428,7 +428,7 @@ import type {
   ThemeFonts,
   ThemeLayout,
   CustomFont
-} from '@autumnsgrove/foliage';
+} from '@groveengine/foliage';
 
 import {
   createCommunityTheme,
@@ -439,7 +439,7 @@ import {
   addRating,
   incrementDownloads,
   updateThemeStatus
-} from '@autumnsgrove/foliage/server';
+} from '@groveengine/foliage/server';
 ```
 
 ---
@@ -646,7 +646,7 @@ database_id = "your-correct-id"
 Import types correctly:
 ```typescript
 import type { RequestHandler } from './$types';
-import type { CommunityTheme } from '@autumnsgrove/foliage';
+import type { CommunityTheme } from '@groveengine/foliage';
 ```
 
 ### Migrations Not Applied
@@ -657,7 +657,7 @@ Check path and database:
 find node_modules -name "*.sql" | grep foliage
 
 # Apply migrations
-wrangler d1 execute foliage-db --file=node_modules/@autumnsgrove/foliage/migrations/001_initial.sql
+wrangler d1 execute foliage-db --file=node_modules/@groveengine/foliage/migrations/001_initial.sql
 ```
 
 ---

@@ -1,5 +1,5 @@
 import type { RequestHandler } from './$types';
-import { addRating, getCommunityTheme } from '@autumnsgrove/foliage/server';
+import { addRating, getCommunityTheme } from '@groveengine/foliage/server';
 import { json } from '@sveltejs/kit';
 
 /**

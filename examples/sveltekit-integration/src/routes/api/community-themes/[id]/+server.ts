@@ -3,9 +3,9 @@ import {
 	getCommunityTheme,
 	updateCommunityTheme,
 	deleteCommunityTheme
-} from '@autumnsgrove/foliage/server';
+} from '@groveengine/foliage/server';
 import { json } from '@sveltejs/kit';
-import type { CommunityTheme } from '@autumnsgrove/foliage';
+import type { CommunityTheme } from '@groveengine/foliage';
 
 /**
  * GET /api/community-themes/[id]

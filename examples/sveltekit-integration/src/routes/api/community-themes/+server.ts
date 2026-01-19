@@ -1,7 +1,7 @@
 import type { RequestHandler } from './$types';
-import { createCommunityTheme, listCommunityThemes } from '@autumnsgrove/foliage/server';
+import { createCommunityTheme, listCommunityThemes } from '@groveengine/foliage/server';
 import { json } from '@sveltejs/kit';
-import type { CommunityTheme, CommunityThemeStatus } from '@autumnsgrove/foliage';
+import type { CommunityTheme, CommunityThemeStatus } from '@groveengine/foliage';
 
 /**
  * POST /api/community-themes

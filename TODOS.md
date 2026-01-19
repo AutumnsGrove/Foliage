@@ -119,7 +119,7 @@ pnpm lint         # Run ESLint (0 errors, warnings only)
 **1. Wire up FontUploader to server functions** (Recommended First)
 ```typescript
 // In your SvelteKit route (e.g., +server.ts):
-import { uploadFont, deleteFont, listFonts } from '@autumnsgrove/foliage/server/font-uploader';
+import { uploadFont, deleteFont, listFonts } from '@groveengine/foliage/server/font-uploader';
 
 // POST /api/fonts - Upload new font
 // DELETE /api/fonts/:id - Delete font

@@ -5,7 +5,7 @@
 **Internal Name:** GroveThemes
 **Public Name:** Foliage
 **Repository:** `AutumnsGrove/Foliage`
-**Package:** `@autumnsgrove/foliage`
+**Package:** `@groveengine/foliage`
 
 ---
 
@@ -457,7 +457,7 @@ export function validateCustomCSS(css: string): ValidationResult {
 
 ```json
 {
-  "name": "@autumnsgrove/foliage",
+  "name": "@groveengine/foliage",
   "version": "0.1.0",
   "description": "Theme system for Grove — personal expression with modern guardrails",
   "type": "module",

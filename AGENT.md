@@ -16,7 +16,7 @@ Foliage is Grove's theme system — providing visual customization from simple a
 - **Storage:** R2 for custom fonts
 
 ## Architecture Notes
-- **Package name:** `@autumnsgrove/foliage`
+- **Package name:** `@groveengine/foliage`
 - **Status:** Package implemented, pending GroveEngine integration
 - **Tiered feature access:** Free → Seedling → Sapling → Oak → Evergreen
 - **10 curated themes** with tier-based unlocking

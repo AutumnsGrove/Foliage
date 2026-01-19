@@ -1,7 +1,12 @@
 {
-  "name": "@autumnsgrove/foliage",
+  "name": "@groveengine/foliage",
   "version": "0.1.0",
   "description": "Theme system for Grove — personal expression with modern guardrails",
+  "author": "AutumnsGrove",
+  "homepage": "https://github.com/AutumnsGrove/Foliage#readme",
+  "bugs": {
+    "url": "https://github.com/AutumnsGrove/Foliage/issues"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

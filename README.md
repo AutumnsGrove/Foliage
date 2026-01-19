@@ -2,7 +2,7 @@
 
 Grove's theme system — personal expression with modern guardrails.
 
-**Package:** `@autumnsgrove/foliage`
+**Package:** `@groveengine/foliage`
 **Status:** Package implemented, pending GroveEngine integration
 
 ---
@@ -62,7 +62,7 @@ pnpm lint         # Run ESLint
 ## Installation
 
 ```bash
-pnpm add @autumnsgrove/foliage
+pnpm add @groveengine/foliage
 ```
 
 ### Usage
@@ -74,19 +74,19 @@ import {
   ThemePreview,
   ThemeCustomizer,
   AccentColorPicker
-} from '@autumnsgrove/foliage';
+} from '@groveengine/foliage';
 
 // Import server functions (for SvelteKit)
 import {
   loadThemeSettings,
   saveThemeSettings
-} from '@autumnsgrove/foliage/server';
+} from '@groveengine/foliage/server';
 
 // Import utilities
 import {
   generateThemeVariables,
   validateThemeContrast
-} from '@autumnsgrove/foliage/utils';
+} from '@groveengine/foliage/utils';
 ```
 
 ---
@@ -138,7 +138,7 @@ import {
   saveThemeSettings,
   updateAccentColor,
   updateThemeId
-} from '@autumnsgrove/foliage/server/theme-loader';
+} from '@groveengine/foliage/server/theme-loader';
 ```
 
 ### Font Management
@@ -147,7 +147,7 @@ import {
   uploadFont,
   deleteFont,
   listFonts
-} from '@autumnsgrove/foliage/server/font-uploader';
+} from '@groveengine/foliage/server/font-uploader';
 ```
 
 ### Community Themes
@@ -156,7 +156,7 @@ import {
   createCommunityTheme,
   listCommunityThemes,
   addRating
-} from '@autumnsgrove/foliage/server/community-themes';
+} from '@groveengine/foliage/server/community-themes';
 ```
 
 ---
@@ -226,8 +226,8 @@ Foliage integrates through package exports:
 ```svelte
 <!-- +layout.svelte -->
 <script>
-  import { loadThemeSettings } from '@autumnsgrove/foliage/server';
-  import { generateThemeVariables } from '@autumnsgrove/foliage/utils';
+  import { loadThemeSettings } from '@groveengine/foliage/server';
+  import { generateThemeVariables } from '@groveengine/foliage/utils';
 
   const settings = await loadThemeSettings(db, tenantId);
   const cssVars = generateThemeVariables(theme, settings);
@@ -244,7 +244,7 @@ Admin routes at `/settings/theme` and `/settings/fonts` manage customization.
 
 ## License
 
-Proprietary — Part of AutumnsGrove ecosystem.
+AGPL-3.0 — See [LICENSE](./LICENSE) for details.
 
 ---
 
