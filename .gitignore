@@ -20,7 +20,8 @@ secrets.json
 Thumbs.db
 
 # IDE
-.claude/
+.claude/*
+!.claude/skills/
 .vscode/
 .idea/
 
@@ -30,3 +31,6 @@ __pycache__/
 
 # Test coverage
 coverage/
+
+# BaseProject backups
+.baseproject-backup-*/
